@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar/Navbar.jsx";
+import Home from "./pages/Home/Home.jsx";
 import "./app.css";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Home />
     </>
   )
 }
