@@ -1,4 +1,4 @@
-export const sombreros = [
+export const posts = [
     {
         id: 1,
         title: "Why sombreros are cool",
