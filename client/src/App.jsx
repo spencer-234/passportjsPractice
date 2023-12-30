@@ -12,7 +12,7 @@ import {
 
 function App() {
 
-  const user = false;
+  const user = true;
 
   const ProtectedRoute = ({ children }) => {
     if (!user) {
@@ -25,7 +25,7 @@ function App() {
   const Layout = () => {
     return (
       <div>
-        <Navbar />
+        <Navbar user={user} />
         <Outlet />
       </div>
     )
@@ -34,30 +34,25 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: (
-        <ProtectedRoute>
-          <Layout />
-        </ProtectedRoute>
-      ),
+      element: <Layout />,
       children: [
+        {
+          path: "/posts/:id",
+          element: (
+            <ProtectedRoute>
+              <Posts />
+            </ProtectedRoute>
+          ),
+        },
         {
           path: "/",
           element: <Home />,
         },
         {
-          path: "/posts/:id",
-          element: <Posts />,
+          path: "/login",
+          element: <Login />,
         },
       ],
-    },
-    {
-      path: "/login",
-      element: (
-        <>
-          <Navbar />
-          <Login />
-        </>
-      ),
     },
   ]);
 

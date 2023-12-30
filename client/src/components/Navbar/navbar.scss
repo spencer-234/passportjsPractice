@@ -15,18 +15,23 @@
     .itemList {
         display: flex;
         align-items: center;
-
-        .item {
-            margin-right: 20px;
-            font-weight: 600;
-            cursor: pointer;
-
             .avatar {
                 width: 32px;
                 height: 32px;
                 border-radius: 50%;
                 object-fit: cover;
             }
-        }
+    }
+
+    .regLink {
+        color: white;
+        text-decoration: none;
+    }
+
+    .item,
+    .login {
+        margin-right: 20px;
+        font-weight: 600;
+        cursor: pointer;
     }
 }
