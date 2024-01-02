@@ -1,9 +1,12 @@
+import { useLocation } from "react-router-dom";
 import { posts } from "../../dummyData.js";
 import "./post.scss";
 
 export default function Posts() {
+  const location = useLocation().pathname.split("/")[2];
 
-    const post = posts[2];
+  const post = posts.find(p => p.id == location);
+  console.log(post);
 
   return (
     <div className="post">
