@@ -3,7 +3,7 @@ import Home from "./pages/Home/Home.jsx";
 import Posts from "./pages/Posts/Posts.jsx";
 import Login from "./pages/Login/Login.jsx";
 import "./app.css";
-import { server_url } from "./src/server/server_url.js";
+import { server_url } from "./server/server_url.js";
 import {
   createBrowserRouter,
   RouterProvider,
