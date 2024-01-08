@@ -1,4 +1,5 @@
 import passport from 'passport';
+import 'dotenv/config';
 
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 
