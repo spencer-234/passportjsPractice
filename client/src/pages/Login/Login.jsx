@@ -2,11 +2,12 @@ import "./login.scss";
 import Google from "../../assets/social_icons/google.png";
 import Github from "../../assets/social_icons/github.png";
 import Facebook from "../../assets/social_icons/facebook.png";
+import { server_url } from "../../server/server_url";
 
 export default function Login() {
 
   const google = () => {
-    window.open("http://localhost:5000/auth/google", "_self");
+    window.open(`${server_url}auth/google`, "_self");
   }
 
   return (

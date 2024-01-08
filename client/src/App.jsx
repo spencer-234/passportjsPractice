@@ -3,6 +3,7 @@ import Home from "./pages/Home/Home.jsx";
 import Posts from "./pages/Posts/Posts.jsx";
 import Login from "./pages/Login/Login.jsx";
 import "./app.css";
+import { server_url } from "./server/server_url.js";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -17,7 +18,7 @@ function App() {
 
   useEffect(() => {
     const getUser = () => {
-      fetch("http://localhost:5000/auth/login/success", {
+      fetch(`${server_url}auth/login/success`, {
         method: "GET",
         credentials: "include",
         headers: {

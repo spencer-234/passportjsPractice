@@ -1,10 +1,11 @@
 import "./navbar.scss";
 import { Link } from "react-router-dom";
+import { server_url } from "../../server/server_url";
 
 export default function Navbar({ user }) {
 
   const logout = () => {
-    window.open("http://localhost:5000/auth/logout", "_self");
+    window.open(`${server_url}auth/logout`, "_self");
   }
 
   return (
