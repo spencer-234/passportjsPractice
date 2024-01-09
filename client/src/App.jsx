@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     const getUser = () => {
-      fetch(`${server_url}auth/login/success`, {
+      fetch(`${server_url}/auth/login/success`, {
         method: "GET",
         credentials: "include",
         headers: {

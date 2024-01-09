@@ -7,7 +7,7 @@ import { server_url } from "../../server/server_url";
 export default function Login() {
 
   const google = () => {
-    window.open(`${server_url}auth/google`, "_self");
+    window.open(`${server_url}/auth/google`, "_self");
   }
 
   return (

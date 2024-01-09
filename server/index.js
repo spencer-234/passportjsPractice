@@ -19,7 +19,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(cors({
-    origin: "https://spencer-234-passport-practice-static.onrender.com/",
+    origin: "https://spencer-234-passport-practice-static.onrender.com",
     methods: "GET, POST, PUT, DELETE",
     credentials: true,
 }))
