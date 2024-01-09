@@ -17,8 +17,8 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const getUser = () => {
-      fetch(`${server_url}/auth/login/success`, {
+    const getUser = async () => {
+      await fetch(`${server_url}/auth/login/success`, {
         method: "GET",
         credentials: "include",
         headers: {
